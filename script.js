@@ -8,7 +8,7 @@ addItemBtn.addEventListener("click", createItem)
 function createItem() {
     let todoInput = document.getElementById("todo-input").value
     if (todoInput === "") {
-        alert("No input")
+        noInput()
     } else {
         const inputStr = `<li class="todo-item">${todoInput} <i class="fa-solid fa-xmark delete"></i></li>`
         todoList.innerHTML += inputStr
@@ -35,6 +35,12 @@ function checkItem() {
             todoItem[x].classList.toggle("checked")
         })
     }
+}
+
+function noInput() {
+    const toast = document.getElementById("toast")
+    toast.className = "show"
+    setTimeout(function() { toast.className = toast.className.replace("show", ""); }, 3000)
 }
 
 checkItem()
