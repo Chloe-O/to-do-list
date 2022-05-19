@@ -28,6 +28,7 @@ body {
 #todo-list {
     width: 100%;
     padding-top: 1.5em;
+    word-break: break-word;
 }
 
 #add-item {
