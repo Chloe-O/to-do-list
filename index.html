@@ -7,17 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
         integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>Todo ✅</title>
 </head>
 
 <body>
     <div id="todo-container">
-        <input type="text" name="" id="todo-input">
-        <span id="add-item">Add</span>
+        <div class="item-input">
+            <input type="text" maxlength="50" id="todo-input" placeholder="What do you need to do?">
+            <span id="add-item">Add</span>
+        </div>
         <ul id="todo-list">
-            <li class="todo-item checked">To do 1 <i class="fa-solid fa-xmark delete"></i></li>
+            <li class="todo-item">Start by adding a new to do item...<i class="fa-solid fa-xmark delete"></i>
+            </li>
         </ul>
+    </div>
+    <div class="github-icon"> 
+        <a href="https://github.com/Chloe-O/to-do-list" target="_blank"><i class="fa-brands fa-github"></i></a>
     </div>
     <script src="./script.js"></script>
 </body>

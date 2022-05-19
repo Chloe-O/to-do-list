@@ -9,30 +9,56 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
+    background: #C7B2AD;
+    font-size: 1rem;
+    font-family: 'Ubuntu', sans-serif;
+    color: #776B68;
 }
 
 #todo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    min-height: 500px;
     background: #dedede;
-    padding: 5em;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+}
+
+#todo-list {
+    width: 100%;
+    padding-top: 1.5em;
 }
 
 #add-item {
-    background-color: pink;
+    background-color: #A3A1B0;
     padding: 1em 1.25em;
     cursor: pointer;
+    transition: 0.5s;
+}
+
+.item-input {
+    display: flex;
+}
+
+.item-input input {
+    border: none;
 }
 
 i.delete {
     float: right;
+    padding-left: 5px;
 }
 
 .delete:hover {
-    background-color: red;
-    color: #fff;
+    cursor: pointer;
+    color: #F4F0EF;
 }
 
 #add-item:hover {
-    background-color: yellow;
+    background-color: #776B68;
+    color: #F4F0EF;
+    transition: 0.5s;
 }
 
 .checked {
@@ -45,5 +71,53 @@ i.delete {
 }
 
 .todo-item:hover {
-    background-color: rgba(0, 0, 0, 0.233);
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.068);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+li.todo-item {
+    list-style: none;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.233);
+
+}
+
+input#todo-input {
+    padding: 5px;
+    font-size: 1rem;
+    color: #776B68;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.github-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+    font-size: 5rem;
+}
+
+.github-icon a {
+    color: #776B68;
+}
+
+.github-icon a:hover {
+    color: #F4F0EF; 
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+@media (max-width: 480px) {
+    #todo-container {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #add-item {
+        padding: 5px;
+    }
+
 }
